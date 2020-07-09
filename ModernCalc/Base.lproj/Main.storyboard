@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="ModernCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="A1q-Cf-Ult">
+                                <rect key="frame" x="-44" y="0.0" width="502" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ol2-sa-pls">
+                                <rect key="frame" x="20" y="427" width="374" height="415"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="30H-0O-NSN">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhd-Np-o3A" customClass="RoundedCalcButton" customModule="ModernCalc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZz-4Q-64L"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVS-Z1-4Zt" customClass="RoundedCalcButton" customModule="ModernCalc" customModuleProvider="target">
+                                                <rect key="frame" x="96" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" image="plusminus"/>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L09-Or-aOn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hB-JH-tAY" customClass="RoundedCalcButton" customModule="ModernCalc" customModuleProvider="target">
+                                                <rect key="frame" x="192" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" image="percent"/>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X73-BU-a50"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTG-Jp-i3D" customClass="RoundedCalcButton" customModule="ModernCalc" customModuleProvider="target">
+                                                <rect key="frame" x="288" y="0.0" width="86" height="75"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.77647058823529413" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="QM9-lx-a4m"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" image="divide"/>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TV4-qo-ueP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ggm-fF-oeH">
+                                        <rect key="frame" x="0.0" y="85" width="374" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trF-ke-2Qa">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o3R-BE-KSG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKx-Eb-bOJ">
+                                                <rect key="frame" x="96" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHU-zq-giZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt3-5o-kEx">
+                                                <rect key="frame" x="192" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q9z-MZ-Vaa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUF-Bl-PaZ" customClass="RoundedCalcButton" customModule="ModernCalc" customModuleProvider="target">
+                                                <rect key="frame" x="288" y="0.0" width="86" height="75"/>
+                                                <state key="normal" image="multiply"/>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="08c-yG-nVf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACx-ar-pQS">
+                                        <rect key="frame" x="0.0" y="170" width="374" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qn-8q-MLd">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TfK-CY-0kW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIG-tT-wAN">
+                                                <rect key="frame" x="96" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWC-4d-CdZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbp-Ly-W3D">
+                                                <rect key="frame" x="192" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e5K-jm-cso"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkp-QS-ha8" customClass="RoundedCalcButton" customModule="ModernCalc" customModuleProvider="target">
+                                                <rect key="frame" x="288" y="0.0" width="86" height="75"/>
+                                                <state key="normal" image="subtract"/>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BHa-MO-mNh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="egM-1l-pEP">
+                                        <rect key="frame" x="0.0" y="255" width="374" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6w-8W-W33">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFt-DU-1yG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWP-hj-lqB">
+                                                <rect key="frame" x="96" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDa-Iq-91V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1Y-Wt-CAP">
+                                                <rect key="frame" x="192" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g6T-P4-7We"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CU5-4K-Kp1" customClass="RoundedCalcButton" customModule="ModernCalc" customModuleProvider="target">
+                                                <rect key="frame" x="288" y="0.0" width="86" height="75"/>
+                                                <state key="normal" image="add"/>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcS-e6-ALI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-bg-wzK">
+                                        <rect key="frame" x="0.0" y="340" width="374" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oX-lO-aTD">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KVp-DS-BNC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltZ-cd-KT9">
+                                                <rect key="frame" x="96" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f9U-Op-jEZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb2-qQ-4A9">
+                                                <rect key="frame" x="192" y="0.0" width="86" height="75"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                                <state key="normal" title="00">
+                                                    <color key="titleColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4oY-Xi-LRw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAZ-s2-FdT" customClass="EqualSignButton" customModule="ModernCalc" customModuleProvider="target">
+                                                <rect key="frame" x="288" y="0.0" width="86" height="75"/>
+                                                <color key="backgroundColor" red="0.77647058823529413" green="0.28627450980392155" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="equals"/>
+                                                <connections>
+                                                    <action selector="calcButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="66Z-BP-UB0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="f5o-oq-EV6"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="f5o-oq-EV6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="f5o-oq-EV6"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,024" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-Kp-VNy">
+                                <rect key="frame" x="114" y="345.66666666666669" width="280" height="61.333333333333314"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="50"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIC-ZI-j5V">
+                                <rect key="frame" x="194" y="288.66666666666669" width="200" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Iuu-fo-j7Z"/>
+                                    <constraint firstAttribute="width" constant="200" id="zfb-02-lyS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Iuu-fo-j7Z"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Iuu-fo-j7Z"/>
+                                        <exclude reference="zfb-02-lyS"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j5f-Kp-VNy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="3Aw-13-PcE"/>
+                            <constraint firstItem="ol2-sa-pls" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Cc-aY-52w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ol2-sa-pls" secondAttribute="bottom" constant="20" id="H1K-KC-pWa"/>
+                            <constraint firstItem="A1q-Cf-Ult" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="K0b-1e-mGU"/>
+                            <constraint firstItem="j5f-Kp-VNy" firstAttribute="trailing" secondItem="ol2-sa-pls" secondAttribute="trailing" id="ZRG-b2-t4B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ol2-sa-pls" secondAttribute="trailing" constant="20" id="as8-Zh-cW8"/>
+                            <constraint firstItem="ol2-sa-pls" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5y-dp-olK"/>
+                            <constraint firstItem="ol2-sa-pls" firstAttribute="top" secondItem="j5f-Kp-VNy" secondAttribute="bottom" constant="20" id="btp-XB-2Ec"/>
+                            <constraint firstItem="JIC-ZI-j5V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="byN-w5-IWy"/>
+                            <constraint firstItem="A1q-Cf-Ult" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-44" id="cCo-g4-6o5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JIC-ZI-j5V" secondAttribute="trailing" constant="20" id="cuy-y2-G2H"/>
+                            <constraint firstItem="ol2-sa-pls" firstAttribute="top" secondItem="j5f-Kp-VNy" secondAttribute="bottom" constant="16.670000000000002" id="dOi-RC-Zfy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j5f-Kp-VNy" secondAttribute="trailing" constant="20" id="jcg-5E-dJ3"/>
+                            <constraint firstItem="A1q-Cf-Ult" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="44" id="nDb-cj-0Yv"/>
+                            <constraint firstItem="j5f-Kp-VNy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="or7-wg-z15"/>
+                            <constraint firstItem="j5f-Kp-VNy" firstAttribute="top" secondItem="JIC-ZI-j5V" secondAttribute="bottom" constant="20" id="p2L-9h-Qqq"/>
+                            <constraint firstItem="JIC-ZI-j5V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="sLv-AE-J8m"/>
+                            <constraint firstItem="j5f-Kp-VNy" firstAttribute="leading" secondItem="JIC-ZI-j5V" secondAttribute="trailing" constant="84" id="xd1-4y-Xnf"/>
+                            <constraint firstAttribute="bottom" secondItem="A1q-Cf-Ult" secondAttribute="bottom" id="zhf-pP-5F3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="byN-w5-IWy"/>
+                                <exclude reference="sLv-AE-J8m"/>
+                                <exclude reference="dOi-RC-Zfy"/>
+                                <exclude reference="3Aw-13-PcE"/>
+                                <exclude reference="ZRG-b2-t4B"/>
+                                <exclude reference="xd1-4y-Xnf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="cuy-y2-G2H"/>
+                                <exclude reference="jcg-5E-dJ3"/>
+                                <include reference="byN-w5-IWy"/>
+                                <include reference="sLv-AE-J8m"/>
+                                <include reference="6Cc-aY-52w"/>
+                                <exclude reference="btp-XB-2Ec"/>
+                                <include reference="dOi-RC-Zfy"/>
+                                <include reference="3Aw-13-PcE"/>
+                                <include reference="ZRG-b2-t4B"/>
+                                <exclude reference="or7-wg-z15"/>
+                                <exclude reference="p2L-9h-Qqq"/>
+                                <include reference="xd1-4y-Xnf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="currentNumberTypedLbl" destination="j5f-Kp-VNy" id="4vw-y0-ERd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.61607142857142" y="136.23188405797103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="40" height="40"/>
+        <image name="bg" width="1333.3333740234375" height="2000"/>
+        <image name="divide" width="40" height="40"/>
+        <image name="equals" width="40" height="40"/>
+        <image name="multiply" width="40" height="40"/>
+        <image name="percent" width="40" height="40"/>
+        <image name="plusminus" width="40" height="40"/>
+        <image name="subtract" width="40" height="40"/>
+    </resources>
+</document>
