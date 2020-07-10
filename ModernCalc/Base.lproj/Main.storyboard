@@ -250,12 +250,15 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,024" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-Kp-VNy">
                                 <rect key="frame" x="114" y="345.66666666666669" width="280" height="61.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61.329999999999998" id="DTS-Bv-U72"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="50"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.85490196080000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIC-ZI-j5V">
-                                <rect key="frame" x="194" y="288.66666666666669" width="200" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIC-ZI-j5V">
+                                <rect key="frame" x="94" y="325.66666666666669" width="300" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Iuu-fo-j7Z"/>
                                     <constraint firstAttribute="width" constant="200" id="zfb-02-lyS"/>
@@ -265,7 +268,7 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Iuu-fo-j7Z"/>
+                                        <exclude reference="zfb-02-lyS"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
@@ -303,10 +306,10 @@
                             <mask key="constraints">
                                 <exclude reference="byN-w5-IWy"/>
                                 <exclude reference="sLv-AE-J8m"/>
-                                <exclude reference="dOi-RC-Zfy"/>
                                 <exclude reference="3Aw-13-PcE"/>
                                 <exclude reference="ZRG-b2-t4B"/>
                                 <exclude reference="xd1-4y-Xnf"/>
+                                <exclude reference="dOi-RC-Zfy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -315,18 +318,19 @@
                                 <exclude reference="jcg-5E-dJ3"/>
                                 <include reference="byN-w5-IWy"/>
                                 <include reference="sLv-AE-J8m"/>
-                                <include reference="6Cc-aY-52w"/>
-                                <exclude reference="btp-XB-2Ec"/>
-                                <include reference="dOi-RC-Zfy"/>
                                 <include reference="3Aw-13-PcE"/>
                                 <include reference="ZRG-b2-t4B"/>
                                 <exclude reference="or7-wg-z15"/>
                                 <exclude reference="p2L-9h-Qqq"/>
                                 <include reference="xd1-4y-Xnf"/>
+                                <include reference="6Cc-aY-52w"/>
+                                <exclude reference="btp-XB-2Ec"/>
+                                <include reference="dOi-RC-Zfy"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentEquationLbl" destination="JIC-ZI-j5V" id="GWe-Tv-V1m"/>
                         <outlet property="currentNumberTypedLbl" destination="j5f-Kp-VNy" id="4vw-y0-ERd"/>
                     </connections>
                 </viewController>
