@@ -19,12 +19,11 @@ class CalcHelper {
     
     //add the next value to current num
     func AppendUserEnteredNumber(userEnteredNumber number: String) -> String {
-        print("In the AppendUserEnteredNumber function - currentNum = \(currentNum)")
         //limit the input to 9 max
         if currentNum.count <= 9 {
             currentNum.append(number)
-            print("After appending to currentNum, currentNum = \(currentNum)")
             currentEquation.append(number)
+            print("current equation from AppendUserInput = \(currentEquation)")
         }
         
         return currentNum
@@ -35,6 +34,7 @@ class CalcHelper {
         if currentNum != "" {
             //append to stored values
             storedValues.append(currentNum)
+            print("current present currentNum that was added = \(storedValues)")
         }
         
         //clear the current num so that the next set can be stored
@@ -49,10 +49,26 @@ class CalcHelper {
         if let number = Double(number) {
             //do the math
             let percent = number / 100
-            //reassign the current num string with the percent value
-            currentNum = String(percent)
+            print("Percent = \(percent)")
             
-            currentEquation = currentNum
+            if storedValues.isEmpty {
+                //reassign the current num string with the percent value
+                currentNum = String(percent)
+                print("currentNum = \(currentNum)")
+
+                currentEquation = "\(currentNum)%"
+            }
+            else {
+                if let currentNumber = Double(storedValues[0]) {
+                    print("current number is = \(currentNumber)")
+                    let combinedNum = currentNumber * percent
+                    print("combined number is = \(combinedNum)")
+
+                     currentNum = String(combinedNum)
+                    currentEquation = "\(currentNum)%"
+                }
+            }
+            print(storedValues)
         }
         return currentNum
     }
@@ -64,6 +80,7 @@ class CalcHelper {
             
             //reassign the currentNum with a negative number
             currentNum = String(negativeNum)
+            print("current num in negative func = \(currentNum)")
             
             currentEquation = currentNum
         }

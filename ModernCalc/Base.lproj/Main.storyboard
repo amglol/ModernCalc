@@ -248,7 +248,7 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,024" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-Kp-VNy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-Kp-VNy">
                                 <rect key="frame" x="114" y="345.66666666666669" width="280" height="61.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61.329999999999998" id="DTS-Bv-U72"/>
@@ -258,17 +258,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIC-ZI-j5V">
-                                <rect key="frame" x="94" y="325.66666666666669" width="300" height="0.0"/>
+                                <rect key="frame" x="19" y="325.66666666666669" width="375" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Iuu-fo-j7Z"/>
-                                    <constraint firstAttribute="width" constant="200" id="zfb-02-lyS"/>
+                                    <constraint firstAttribute="width" constant="375" id="zfb-02-lyS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="zfb-02-lyS"/>
+                                        <exclude reference="Iuu-fo-j7Z"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular">

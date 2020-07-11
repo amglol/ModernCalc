@@ -101,6 +101,7 @@ class MainVC: UIViewController {
             currentNumber = getMathInfo.ClearCurrentNumber()
             break
         case 18: // percent sign
+            print("in the case statement for % .. currentNumber = \(currentNumber)")
             currentNumber = getMathInfo.GetPercentFromNumber(enterCurrentNumber: currentNumber)
             break
         case 19: // plus/minus sign
@@ -140,11 +141,13 @@ class MainVC: UIViewController {
         default:
             break
         }
-        if getMathInfo.storedValues.isEmpty && getMathInfo.storedValues.count < 1 {
+        if getMathInfo.storedValues.isEmpty || getMathInfo.storedValues.count < 1 {
+            print("did nothing ")
             //do nothing
             return
         }
         else {
+            print("removing current equation")
             //remove the previous equation string and append the previous sum to the beginning of it with the new operator sign
             getMathInfo.currentEquation.removeAll()
             getMathInfo.currentEquation.append("\(getMathInfo.storedValues[0])\(mathSign)")
